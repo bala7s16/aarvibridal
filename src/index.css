@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Premium Dark Palette */
+  --color-bg: #121212;
+  /* Deep Charcoal/Black */
+  --color-bg-secondary: #0a0a0a;
+  /* Darker depth */
+  --color-primary: #C5A059;
+  /* Muted Gold */
+  --color-primary-light: #E5C585;
+  /* Light Gold */
+  --color-accent: #5D0016;
+  /* Deep Burgundy (Sparingly used) */
+
+  --color-text: #F0E6D2;
+  /* Bone White/Parchment - readable on dark */
+  --color-text-muted: #A8A29E;
+  /* Warm Gray */
+  --color-text-dark: #1a1a1a;
+  /* For light backgrounds if any */
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Spacing - Radical Increase */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 3rem;
+  --spacing-lg: 6rem;
+  --spacing-xl: 12rem;
+
+  /* Borders & Effects */
+  --border-gold: 1px solid rgba(197, 160, 89, 0.3);
+  --shadow-gold: 0 10px 30px -10px rgba(197, 160, 89, 0.15);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  font-weight: 600;
+  /* Regular weight looks too thin on dark, semi-bold is better */
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utilities */
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.section-padding {
+  padding: var(--spacing-lg) 0;
+}
+
+.text-gold {
+  color: var(--color-primary);
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 3px;
+}
+
+/* Selection */
+::selection {
+  background: var(--color-primary);
+  color: var(--color-bg);
+}
